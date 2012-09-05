@@ -6,8 +6,8 @@ bool pong::init(int w, int h, int color) {
             fprintf(stderr, "unable to initialize SDL %s\n", SDL_GetError());
             exit(-1);
         }
-
-        if ((display = SDL_SetVideoMode(w, h, color, SDL_SWSURFACE)) < 0) {
+        //SDL_SWSURFACE
+        if ((display = SDL_SetVideoMode(w, h, color, SDL_DOUBLEBUF)) < 0) {
             fprintf(stderr, "unable to set Video Mode %s\n", SDL_GetError());
             exit(-1);
         }

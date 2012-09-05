@@ -19,9 +19,7 @@ public:
 
         SDL_Rect drect;
         drect.x = x;
-        drect.y = y;
-//        drect.w = NULL;
-//        drect.h = NULL;
+        drect.y = y;        
 
         SDL_BlitSurface(src, NULL, dst, &drect);
         SDL_Flip(dst);
