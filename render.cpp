@@ -1,4 +1,4 @@
 #include "pong.h"
 
-void pong::OnRender() {
+void pong::render() {
 }

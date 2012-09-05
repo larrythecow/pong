@@ -10,17 +10,17 @@ private:
 public:
     pong();
 
-    int OnExecute();
+    int execute();
 
-    bool OnInit();
+    bool init(int w, int h, int color);
 
-    void OnEvent(SDL_Event* Event);
+    void onEvent(SDL_Event* Event);
 
-    void OnLoop();
+    void logic();
 
-    void OnRender();
+    void render();
 
-    void OnCleanup();
+    void cleanup();
 };
 
 #endif

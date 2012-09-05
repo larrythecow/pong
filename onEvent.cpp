@@ -1,4 +1,4 @@
 #include "pong.h"
 
-void pong::OnEvent(SDL_Event* Event) {
+void pong::onEvent(SDL_Event* Event) {
 }

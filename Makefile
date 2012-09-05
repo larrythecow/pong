@@ -1,4 +1,4 @@
-all: clean pong
+all: pong
 
 pong:
 	g++ *.cpp -o pong -lSDL -Wall
