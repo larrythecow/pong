@@ -8,8 +8,8 @@ class Pad {
 private:
 	int x;
 	int y;
-	const int height = 50;
-	const int width = 10;
+	int height;
+	int width;
 	SDL_Surface * surfPad;
 public:	
 	Pad();
@@ -22,6 +22,6 @@ public:
 	void setX(int x);
 	void setY(int y);
 	void render();	
-}
+};
 
 #endif

@@ -16,6 +16,8 @@ Pad::Pad(bool left){
 		printf("unable to load pad-image");
 		exit(EXIT_FAILURE);
 	}
+	width=10;
+	height=50;
 	y=275;
 }
 
