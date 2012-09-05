@@ -9,10 +9,10 @@ private:
     bool running;
     Ball ball;
     SDL_Event event;
-
-public:
     SDL_Surface *display;
 
+public:
+    
     pong();
 
     int execute();

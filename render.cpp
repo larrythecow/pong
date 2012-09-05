@@ -1,5 +1,5 @@
 #include "pong.h"
 
 void pong::render() {
-    ball.render();
+    ball.render(display);
 }
