@@ -6,10 +6,18 @@
 
 class Ball
 {
+private:
+    int x;
+    int y;
+	int lastx;
+	int lasty;
+    signed int movex;
+    signed int movey;
+    SDL_Surface *surfBall;
+
 public:
     Ball();
     ~Ball();
-
     int getX();
     void setX(int x);
     int getY();
@@ -23,17 +31,6 @@ public:
     int getMoveY();
     void setMoveY(int movey);
     void render(SDL_Surface *display);
-
-
-private:
-    int x;
-    int y;
-	int lastx;
-	int lasty;
-    signed int movex;
-    signed int movey;
-    SDL_Surface *surfBall;
-
 };
 
 #endif // BALL_H
