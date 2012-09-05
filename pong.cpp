@@ -5,8 +5,18 @@ pong::pong() {
 }
 
 int pong::execute() {
-    this->init(600, 400, 16);
-    this->logic();
+    init(600, 400, 16);
+
+    SDL_Event event;
+
+    while(running){
+        while(SDL_PollEvent(&event))
+            onEvent(&event);
+        //logic();
+        render();
+    }
+
+    cleanup();
     return 0;
 }
 

@@ -2,10 +2,12 @@
 #define _PONG_H_
 
 #include <SDL/SDL.h>
+#include "Ball.h"
 
 class pong {
 private:
-    bool Running;
+    bool running;
+    Ball ball();
 
 public:
     pong();

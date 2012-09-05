@@ -2,12 +2,13 @@
 #define BALL_H
 
 #include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
 
-class ball
+class Ball
 {
 public:
-    ball();
-    ~ball();
+    Ball();
+    ~Ball();
 
     int getX();
     void setX(int x);
@@ -17,6 +18,7 @@ public:
     void setMoveX(int movex);
     int getMoveY();
     void setMoveY(int movey);
+    void render();
 
 
 private:
