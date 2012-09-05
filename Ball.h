@@ -24,6 +24,8 @@ public:
 private:
     int x;
     int y;
+	int lastx;
+	int lasty;
     signed int movex;
     signed int movey;
     SDL_Surface *surfBall;
