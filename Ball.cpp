@@ -1,71 +1,61 @@
 #include "Ball.h"
 
+Ball::Ball() {
 
-Ball::Ball()
-{
-
-    ballPicPointer=IMG_Load("ball.png");
-    if(!ballPicPointer) {
+    ballPicPointer = IMG_Load("ball.png");
+    if (!ballPicPointer) {
         printf("IMG_Load: %s\n", IMG_GetError());
         // handle error
     }
 
-    x=32;
-    y=20;
+    x = 32;
+    y = 20;
 }
 
-Ball::~Ball()
-{
+Ball::~Ball() {
 }
 
-int Ball::getX()
-{
+int Ball::getX() {
     return x;
 }
 
-void Ball::setX(int x)
-{
-    this->x=x;
+void Ball::setX(int x) {
+    this->x = x;
 }
 
-int Ball::getY()
-{
+int Ball::getY() {
     return y;
 }
 
-void Ball::setY(int y)
-{
-    this->y=y;
+void Ball::setY(int y) {
+    this->y = y;
 }
 
-int Ball::getMoveX()
-{
+int Ball::getMoveX() {
     return movex;
 }
 
-void Ball::setMoveX(int movex)
-{
-    this->movex=movex;
+void Ball::setMoveX(int movex) {
+    this->movex = movex;
 }
 
-int Ball::getMoveY()
-{
+int Ball::getMoveY() {
     return movey;
 }
 
-void Ball::setMoveY(int movey)
-{
-    this->movey=movey;
+void Ball::setMoveY(int movey) {
+    this->movey = movey;
 }
 
-void Ball::render(SDL_Surface *display)
-{
-    // Draws the image on the screen:
-    SDL_Rect rcDest = { x, y, 0, 0 };
-    SDL_BlitSurface ( ballPicPointer, NULL, display, &rcDest );
+void Ball::render(SDL_Surface *display) {
 
-    SDL_UpdateRect(display, x, y, 30, 30);
+    SDL_Rect drect;
+    drect.x = 200;
+    drect.y = 100;
+    drect.w = 10;
+    drect.h = 10;
+    SDL_BlitSurface(ballPicPointer, NULL, display, &drect);
+    SDL_Flip(display);
 
-    SDL_FreeSurface ( ballPicPointer );
 }
 
