@@ -22,7 +22,6 @@ public:
         drect.y = y;        
 
         SDL_BlitSurface(src, NULL, dst, &drect);
-        SDL_Flip(dst);
     }
 
 

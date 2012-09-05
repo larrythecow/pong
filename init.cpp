@@ -7,10 +7,13 @@ bool pong::init(int w, int h, int color) {
             exit(-1);
         }
         //SDL_SWSURFACE
-        if ((display = SDL_SetVideoMode(w, h, color, SDL_DOUBLEBUF)) < 0) {
+        if ((display = SDL_SetVideoMode(w, h, color,SDL_HWSURFACE | SDL_DOUBLEBUF)) < 0) {
             fprintf(stderr, "unable to set Video Mode %s\n", SDL_GetError());
             exit(-1);
         }
+		  
+		  SDL_EnableKeyRepeat(1,SDL_DEFAULT_REPEAT_INTERVAL / 3);
+		  
 
         int flags = IMG_INIT_JPG | IMG_INIT_PNG;
         int initted = IMG_Init(flags);

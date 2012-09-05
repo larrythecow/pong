@@ -7,7 +7,7 @@ void pong::logic() {
             ball.setX(i*10);
             ball.setY(i*10);
 
-            SDL_Delay(100);
+//            SDL_Delay(100);
             i++;
         }
 }

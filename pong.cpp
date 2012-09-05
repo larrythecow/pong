@@ -6,6 +6,7 @@ pong::pong() {
 	running=true;
 	rPad = new Pad(false);
 	lPad = new Pad(true);
+	surfBg =  Surface::loadImg("bg.png");
 }
 
 pong::~pong(){

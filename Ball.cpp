@@ -26,7 +26,7 @@ void Ball::setY(int y) {
     this->y = y;
 }
 
-int Ball::getLastX(){
+/*int Ball::getLastX(){
 	return lastx;
 }
 
@@ -40,7 +40,7 @@ int Ball::getLastY(){
 
 void Ball::setLastY(int lasty){
 	this->lasty=lasty;
-}
+}*/
 int Ball::getMoveX() {
     return movex;
 }

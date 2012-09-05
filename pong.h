@@ -13,6 +13,7 @@ private:
     Pad *lPad;
     SDL_Event event;
     SDL_Surface *display;
+	 SDL_Surface *surfBg;
 
 public:
     
