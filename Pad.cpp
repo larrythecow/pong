@@ -6,15 +6,11 @@ Pad::Pad(){
 Pad::Pad(bool left){
 	if(left){
 		x=10;
-		surfPad=IMG_Load("pad_left.png");
+		surfPad = Surface::loadImg("pad_left.png");
 	}
 	else {
 		x=780;
-		surfPad=IMG_Load("pad_right.png");
-	}
-	if(!surfPad){
-		printf("unable to load pad-image");
-		exit(EXIT_FAILURE);
+		surfPad = Surface::loadImg("pad_right.png");
 	}
 	width=10;
 	height=50;

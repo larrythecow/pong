@@ -11,7 +11,9 @@ private:
 	int height;
 	int width;
 	int speed;
+	bool left;
 	SDL_Surface * surfPad;
+
 public:	
 	Pad();
 	Pad(bool left);
@@ -21,10 +23,13 @@ public:
 	int getHeight();
 	int getWidth();
 	int getSpeed();
+	bool isLeft();
 	void setX(int x);
 	void setY(int y);
 	void setSpeed(int speed);
-	void render();	
+	void setLeft(bool left);
+	void render();
+	
 };
 
 #endif

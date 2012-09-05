@@ -9,15 +9,15 @@ class pong {
 private:
     bool running;
     Ball ball;
-    Pad rPad;
-    Pad lPad;
+    Pad *rPad;
+    Pad *lPad;
     SDL_Event event;
     SDL_Surface *display;
 
 public:
     
-    pong();
-
+  	 pong();
+	 ~pong();
     int execute();
 
     bool init(int w, int h, int color);

@@ -3,6 +3,13 @@
 
 pong::pong() {
 	running=true;
+	rPad = new Pad(false);
+	lPad = new Pad(true);
+}
+
+pong::~pong(){
+	delete lPad;
+	delete rPad;	
 }
 
 int pong::execute() {
