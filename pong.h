@@ -3,11 +3,14 @@
 
 #include <SDL/SDL.h>
 #include "Ball.h"
+#include "Pad.h"
 
 class pong {
 private:
     bool running;
     Ball ball;
+    Pad rPad(false);
+    Pad lPad(true);
     SDL_Event event;
     SDL_Surface *display;
 
