@@ -41,6 +41,7 @@ int Ball::getLastY(){
 void Ball::setLastY(int lasty){
 	this->lasty=lasty;
 }
+
 int Ball::getMoveX() {
     return movex;
 }

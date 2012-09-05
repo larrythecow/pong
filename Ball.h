@@ -14,6 +14,10 @@ public:
     void setX(int x);
     int getY();
     void setY(int y);
+	int getLastX();
+	void setLastX(int lastx);
+	int getLastY();
+	void setLastY(int lasty);
     int getMoveX();
     void setMoveX(int movex);
     int getMoveY();
