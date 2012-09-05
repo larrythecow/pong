@@ -8,5 +8,4 @@ void pong::render() {
 	rPad->render(display); 
 	lPad->render(display); 
 
-	SDL_Flip(display);
 }
