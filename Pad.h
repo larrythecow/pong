@@ -10,6 +10,7 @@ private:
 	int y;
 	int height;
 	int width;
+	int speed;
 	SDL_Surface * surfPad;
 public:	
 	Pad();
@@ -19,8 +20,10 @@ public:
 	int getY();
 	int getHeight();
 	int getWidth();
+	int getSpeed();
 	void setX(int x);
 	void setY(int y);
+	void setSpeed(int speed);
 	void render();	
 };
 

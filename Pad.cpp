@@ -18,6 +18,7 @@ Pad::Pad(bool left){
 	}
 	width=10;
 	height=50;
+	speed=5;
 	y=275;
 }
 
@@ -40,6 +41,9 @@ int Pad::getHeight(){
 int Pad::getWidth(){
 	return width;
 }
+int Pad::getSpeed(){
+	return speed;
+}
 
 void Pad::setX(int x){
 	this->x=x;
@@ -47,6 +51,10 @@ void Pad::setX(int x){
 
 void Pad::setY(int y){
 	this->y=y;
+}
+
+void Pad::setSpeed(int speed){
+	this->speed=speed;
 }
 
 void Pad::render(){
