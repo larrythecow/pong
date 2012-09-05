@@ -1,16 +1,17 @@
 #include "Ball.h"
 
+
 Ball::Ball()
 {
-    // load sample.png into image
+
     ballPicPointer=IMG_Load("ball.png");
     if(!ballPicPointer) {
         printf("IMG_Load: %s\n", IMG_GetError());
         // handle error
     }
 
-    x=320;
-    y=200;
+    x=32;
+    y=20;
 }
 
 Ball::~Ball()
@@ -59,6 +60,7 @@ void Ball::setMoveY(int movey)
 
 void Ball::render()
 {
+
 
 
 }

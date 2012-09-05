@@ -7,7 +7,7 @@
 class pong {
 private:
     bool running;
-    Ball ball();
+    Ball ball;
     SDL_Surface*    display;
 
 public:
