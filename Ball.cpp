@@ -60,8 +60,12 @@ void Ball::setMoveY(int movey)
 
 void Ball::render()
 {
+    // Draws the image on the screen:
+    SDL_Rect rcDest = { x, y, 0, 0 };
+    SDL_BlitSurface ( ballPicPointer, NULL, display, &rcDest );
 
+    SDL_UpdateRect(display, x, y, 30, 30);
 
-
+    SDL_FreeSurface ( ballPicPointer );
 }
 
