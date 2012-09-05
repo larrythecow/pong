@@ -1,18 +1,21 @@
 #include "pong.h"
 #include <iostream>
+#include "Ball.h"
 
 pong::pong() {
-	running=true;
+    running = true;
 }
 
 int pong::execute() {
     init(600, 400, 16);
 
-    while(running){
-        while(SDL_PollEvent(&event))
+    while (running) {
+        while (SDL_PollEvent(&event))
             onEvent(&event);
-        //logic();
+        logic();
         render();
+
+
     }
 
     cleanup();
