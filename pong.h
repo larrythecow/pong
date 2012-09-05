@@ -9,8 +9,8 @@ class pong {
 private:
     bool running;
     Ball ball;
-    Pad rPad(false);
-    Pad lPad(true);
+    Pad rPad;
+    Pad lPad;
     SDL_Event event;
     SDL_Surface *display;
 

@@ -2,6 +2,7 @@
 #include <iostream>
 
 pong::pong() {
+	running=true;
 }
 
 int pong::execute() {
