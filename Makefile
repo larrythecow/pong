@@ -1,7 +1,7 @@
 all: pong
 
 pong:
-	g++ *.cpp -o pong -lSDL -Wall
+	g++ *.cpp -o pong -lSDL -Wall -lSDL_image
 
 clean:
 	rm pong
