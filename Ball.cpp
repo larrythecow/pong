@@ -47,6 +47,12 @@ void Ball::setMoveY(int movey) {
     this->movey = movey;
 }
 
+void setimg(SDL_Surface *src, SDL_Rect *srcrect, SDL_Surface *dst, SDL_Rect *dstrect) {
+    
+    SDL_BlitSurface(src, srcrect, dst, dstrect);
+    SDL_Flip(dst);
+}
+
 void Ball::render(SDL_Surface *display) {
 
     SDL_Rect drect;
@@ -54,8 +60,7 @@ void Ball::render(SDL_Surface *display) {
     drect.y = 100;
     drect.w = 10;
     drect.h = 10;
-    SDL_BlitSurface(ballPicPointer, NULL, display, &drect);
-    SDL_Flip(display);
-
+    setimg(ballPicPointer, NULL,display, &drect);
 }
+
 
