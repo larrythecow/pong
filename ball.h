@@ -1,6 +1,8 @@
 #ifndef BALL_H
 #define BALL_H
 
+#include <SDL/SDL.h>
+
 class ball
 {
 public:
@@ -22,7 +24,7 @@ private:
     int y;
     signed int movex;
     signed int movey;
-    Sdl_Surface *ball;
+    SDL_Surface *ballPicPointer;
 
 };
 

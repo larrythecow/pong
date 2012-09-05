@@ -10,6 +10,7 @@ ball::~ball()
 
 int ball::getX()
 {
+    return x;
 }
 
 void ball::setX(int x)
@@ -19,6 +20,7 @@ void ball::setX(int x)
 
 int ball::getY()
 {
+    return y;
 }
 
 void ball::setY(int y)
@@ -28,6 +30,7 @@ void ball::setY(int y)
 
 int ball::getMoveX()
 {
+    return movex;
 }
 
 void ball::setMoveX(int movex)
@@ -37,6 +40,7 @@ void ball::setMoveX(int movex)
 
 int ball::getMoveY()
 {
+    return movey;
 }
 
 void ball::setMoveY(int movey)
