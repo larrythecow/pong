@@ -16,7 +16,6 @@ public:
     }
 
     static void drawImg(SDL_Surface *src, SDL_Surface *dst, int x, int y) {
-        SDL_Flip(dst);
         SDL_Rect drect;
         drect.x = x;
         drect.y = y;

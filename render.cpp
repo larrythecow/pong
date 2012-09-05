@@ -7,5 +7,6 @@ void pong::render() {
    ball.render(display);
 	rPad->render(display); 
 	lPad->render(display); 
-
+	
+	SDL_Flip(display);
 }
