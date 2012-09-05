@@ -14,7 +14,7 @@ void pong::onEvent(SDL_Event* event) {
         }
         case SDL_QUIT:
         {
-            cleanup();
+            running=false;
         }
         default:
         {

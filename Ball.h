@@ -26,7 +26,7 @@ private:
     int y;
     signed int movex;
     signed int movey;
-    SDL_Surface *ballPicPointer;
+    SDL_Surface *surfBall;
 
 };
 

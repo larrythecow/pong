@@ -1,5 +1,5 @@
 #include "pong.h"
 
 void pong::cleanup() {
-    exit(1);
+    SDL_FreeSurface(display);
 }
