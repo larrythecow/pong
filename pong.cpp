@@ -5,7 +5,7 @@ pong::pong() {
 }
 
 int pong::execute() {
-    this->init(800, 600, 16);
+    this->init(600, 400, 16);
     this->logic();
     return 0;
 }
