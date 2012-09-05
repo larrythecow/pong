@@ -18,7 +18,7 @@ public:
     void setMoveX(int movex);
     int getMoveY();
     void setMoveY(int movey);
-    void render();
+    void render(SDL_Surface *display);
 
 
 private:

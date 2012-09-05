@@ -58,7 +58,7 @@ void Ball::setMoveY(int movey)
     this->movey=movey;
 }
 
-void Ball::render()
+void Ball::render(SDL_Surface *display)
 {
     // Draws the image on the screen:
     SDL_Rect rcDest = { x, y, 0, 0 };
