@@ -4,12 +4,14 @@
 pong::pong() {
 }
 
-int pong::OnExecute() {
+int pong::execute() {
+    this->init(800, 600, 16);
+    this->logic();
     return 0;
 }
 
 int main(int argc, char* argv[]) {
     pong theApp;
-
-    return theApp.OnExecute();
+    std::cout << "programm started\n";
+    return theApp.execute();
 }

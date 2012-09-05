@@ -1,4 +1,4 @@
 #include "pong.h"
 
-void pong::OnLoop() {
+void pong::logic() {
 }
