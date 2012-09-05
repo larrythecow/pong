@@ -4,6 +4,7 @@
 #include <SDL/SDL_image.h>
 #include <iostream>
 #include <stdlib.h>
+#include "surface.h"
 class Pad {
 private:
 	int x;
@@ -28,7 +29,7 @@ public:
 	void setY(int y);
 	void setSpeed(int speed);
 	void setLeft(bool left);
-	void render();
+	void render(SDL_Surface *display);
 	
 };
 

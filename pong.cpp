@@ -14,7 +14,7 @@ pong::~pong(){
 }
 
 int pong::execute() {
-    init(600, 400, 16);
+    init(800, 600, 16);
 
     while (running) {
         while (SDL_PollEvent(&event))

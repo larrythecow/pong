@@ -53,6 +53,6 @@ void Pad::setSpeed(int speed){
 	this->speed=speed;
 }
 
-void Pad::render(){
-
+void Pad::render(SDL_Surface *display){
+	Surface::drawImg(surfPad,display,x,y);	
 }
