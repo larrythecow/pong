@@ -24,8 +24,6 @@ void pong::logic() {
     ball.setX(tmpX + ball.getMoveX());
     ball.setY(tmpY + ball.getMoveY());
 
-    i++;
-	}
 	if (lPad->getState()==PAD_UP){
 		lPad->setY(lPad->getY()-lPad->getSpeed());	
 		if(lPad->getY()<= 0)
