@@ -12,7 +12,6 @@ bool pong::init(int w, int h, int color) {
             exit(-1);
         }
 		  
-		  SDL_EnableKeyRepeat(1,SDL_DEFAULT_REPEAT_INTERVAL / 3);
 		  
 
         int flags = IMG_INIT_JPG | IMG_INIT_PNG;
