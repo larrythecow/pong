@@ -4,15 +4,15 @@ void pong::logic() {
     int tmpX = ball.getX();
     int tmpY = ball.getY();
 
-    if (tmpX <= 0 || tmpX >= 800 || tmpY <= 0 || tmpY >= 600) {
+    if (tmpX <= 0 || tmpX >= 800 || tmpY <= 0 || tmpY >= 600 - 10) {
 
         if (tmpX <= 0) {
-            fprintf(stdout, "Player links Hat gewonnen");
+            fprintf(stdout, "Player links Hat gewonnen\n");
         }
         if (tmpX >= 790) {
             fprintf(stdout, "Player links Hat gewonnen");
         }
-        if (tmpY <= (0 + ball.getMoveY())) {
+        if (tmpY <= (0 - ball.getMoveY())) {
             ball.setMoveY(ball.getMoveY()*-1);
             ball.setX(0);
         }
@@ -24,5 +24,5 @@ void pong::logic() {
     ball.setX(tmpX + ball.getMoveX());
     ball.setY(tmpY + ball.getMoveY());
 
-    SDL_Delay(100);
+    SDL_Delay(20);
 }
