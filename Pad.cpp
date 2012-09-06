@@ -40,6 +40,9 @@ int Pad::getWidth(){
 int Pad::getSpeed(){
 	return speed;
 }
+char Pad::getState(){
+	return state;	
+}
 
 void Pad::setX(int x){
 	this->x=x;
@@ -51,6 +54,10 @@ void Pad::setY(int y){
 
 void Pad::setSpeed(int speed){
 	this->speed=speed;
+}
+
+void Pad::setState(char state){
+	this->state=state;
 }
 
 void Pad::render(SDL_Surface *display){

@@ -5,6 +5,11 @@
 #include <iostream>
 #include <stdlib.h>
 #include "surface.h"
+
+#define PAD_STAY 0
+#define PAD_UP 1
+#define PAD_DOWN 2
+
 class Pad {
 private:
 	int x;
@@ -12,8 +17,9 @@ private:
 	int height;
 	int width;
 	int speed;
-	bool left;
+	char state;
 	SDL_Surface * surfPad;
+
 
 public:	
 	Pad();
@@ -24,11 +30,12 @@ public:
 	int getHeight();
 	int getWidth();
 	int getSpeed();
-	bool isLeft();
+	char getState();
 	void setX(int x);
 	void setY(int y);
 	void setSpeed(int speed);
 	void setLeft(bool left);
+	void setState(char state);
 	void render(SDL_Surface *display);
 	
 };

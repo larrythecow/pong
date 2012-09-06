@@ -4,23 +4,34 @@ void pong::onEvent(SDL_Event* event) {
         case SDL_KEYDOWN:
             switch (event->key.keysym.sym){
 				case SDLK_w:
-					lPad->setY(lPad->getY()-lPad->getSpeed());
+					lPad->setState(PAD_UP);
 					break;
 				case SDLK_s:
-					lPad->setY(lPad->getY()+lPad->getSpeed());
+					lPad->setState(PAD_DOWN);
 					break;	
 				case SDLK_UP:
-					rPad->setY(rPad->getY()-rPad->getSpeed());
+					rPad->setState(PAD_UP);
 					break;				
 				case SDLK_DOWN:
-					rPad->setY(rPad->getY()+rPad->getSpeed());
+					rPad->setState(PAD_DOWN);
 					break;
 				default:
 					break;
 			}
 		break;
         case SDL_KEYUP:
-            printf("Reles: %s\n", SDL_GetKeyName(event->key.keysym.sym));
+            switch (event->key.keysym.sym){
+				case SDLK_w:
+				case SDLK_s:
+					lPad->setState(PAD_STAY);
+					break;
+				case SDLK_UP:
+				case SDLK_DOWN:
+					rPad->setState(PAD_STAY);
+					break;				
+				default:
+					break;
+			}
             break;
         case SDL_QUIT:
             running=false;
