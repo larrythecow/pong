@@ -1,6 +1,7 @@
 #include "pong.h"
 #include <iostream>
 #include "Ball.h"
+#include "Net.h"
 
 pong::pong() {
 	running=true;

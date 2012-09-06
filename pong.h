@@ -4,6 +4,7 @@
 #include <SDL/SDL.h>
 #include "Ball.h"
 #include "Pad.h"
+#include "Net.h"
 
 class pong {
 private:
@@ -11,14 +12,16 @@ private:
     Ball ball;
     Pad *rPad;
     Pad *lPad;
+    Net net;
+
     SDL_Event event;
     SDL_Surface *display;
-	 SDL_Surface *surfBg;
+    SDL_Surface *surfBg;
 
 public:
-    
-  	 pong();
-	 ~pong();
+
+    pong();
+    ~pong();
     int execute();
 
     bool init(int w, int h, int color);
