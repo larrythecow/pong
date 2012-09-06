@@ -23,9 +23,9 @@ void pong::logic() {
         ball.setX(600);
     }
 
-    if ((tmpX + ball.getMoveX) <= (lPad->getX() + lPad->getWidth())) {
+    if ((tmpX + ball.getMoveX()) <= (lPad->getX() + lPad->getWidth())) {
         //do
-    } else if ((tmpX + ball.getMoveX) >= (rPad->getX())) {
+    } else if ((tmpX + ball.getMoveX()) >= (rPad->getX())) {
         //do
     }
 
