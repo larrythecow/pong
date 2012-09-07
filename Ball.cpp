@@ -2,7 +2,7 @@
 #include "surface.h"
 
 Ball::Ball() {
-    surfBall = Surface::loadImg("ball.png");
+    surfBall = Surface::loadImg("img/ball.png");
     this->x=1;
     this->y=1;
     this->setMoveX(5);

@@ -10,11 +10,24 @@ void pong::logic() {
     //            ) {
 
     if (tmpX <= 0) {
-        fprintf(stdout, "Player rechts hat gewonnen\n");
-		  running=false;
+		  rPad->setScore(rPad->getScore() +1);
+		  
+		  if(rPad->getScore() >= 10){
+			  fprintf(stdout, "Player rechts hat %d zu %d gewonnen\n",rPad->getScore(),lPad->getScore());
+			  running=false;
+		  }else{
+			  ball.setX(400);  
+			  return;
+		  }
     } else if (tmpX >= 790) {
-        fprintf(stdout, "Player links hat gewonnen\n");
-		  running=false;
+		  lPad->setScore(lPad->getScore() +1);
+		  if(lPad->getScore() >= 10){
+			  fprintf(stdout, "Player links hat %d zu %d gewonnen\n",lPad->getScore(),rPad->getScore());
+			  running=false;
+		  }else{
+			  ball.setX(400);
+			  return;
+		  }
     } else
         if (tmpY <= (0 - ball.getMoveY())) {
         ball.setMoveY(ball.getMoveY()*-1);

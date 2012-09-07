@@ -1,12 +1,23 @@
-all: pong
+CC=g++
+CFLAGS = -c -Wall
+LDFLAGS = -lSDL -lSDL_image
+SOURCES = Ball.cpp cleanup.cpp init.cpp logic.cpp onEvent.cpp Pad.cpp pong.cpp render.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
+EXECUTABLE = pong
 
-pong:
-	g++ *.cpp -o pong -lSDL -Wall -lSDL_image -lSDL_net
+
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $@ $(LDFLAGS) 
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm pong
+	rm $(OBJECTS) $(EXECUTABLE)
 
 run: pong
-	./pong
+	./$(EXECUTABLE)
 
 

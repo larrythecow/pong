@@ -1,9 +1,7 @@
 #ifndef _PAD_H_
 #define _PAD_H_
 #include <SDL/SDL.h>
-#include <SDL/SDL_image.h>
 #include <iostream>
-#include <stdlib.h>
 #include "surface.h"
 
 #define PAD_STAY 0
@@ -18,8 +16,9 @@ private:
 	int width;
 	int speed;
 	char state;
+	int score;
 	SDL_Surface * surfPad;
-
+	SDL_Surface *surfScore;
 
 public:	
 	Pad();
@@ -31,12 +30,14 @@ public:
 	int getWidth();
 	int getSpeed();
 	char getState();
+	int getScore();
 	void setX(int x);
 	void setY(int y);
 	void setSpeed(int speed);
 	void setLeft(bool left);
 	void setState(char state);
-	void render(SDL_Surface *display);
+	void setScore(int score);
+	void render(SDL_Surface *display,bool left);
 	
 };
 
