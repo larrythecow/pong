@@ -14,7 +14,7 @@ Pad::Pad(bool left){
 	}
 	width=10;
 	height=50;
-	speed=5;
+	speed=10;
 	y=275;
 }
 
