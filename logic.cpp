@@ -17,6 +17,7 @@ void pong::logic() {
 			  running=false;
 		  }else{
 			  ball.setX(400);  
+			  ball.genRandDirection();
 			  return;
 		  }
     } else if (tmpX >= 790) {
@@ -26,6 +27,7 @@ void pong::logic() {
 			  running=false;
 		  }else{
 			  ball.setX(400);
+			  ball.genRandDirection();
 			  return;
 		  }
     } else

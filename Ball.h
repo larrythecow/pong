@@ -3,14 +3,17 @@
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
+#include <stdio.h>
+#include <time.h>
+
 
 class Ball
 {
 private:
     int x;
     int y;
-    signed int movex;
-    signed int movey;
+    signed int moveX;
+    signed int moveY;
     SDL_Surface *surfBall;
 
 public:
@@ -25,6 +28,7 @@ public:
     int getMoveY();
     void setMoveY(int movey);
     void render(SDL_Surface *display);
+	 void genRandDirection();
 };
 
 #endif // BALL_H
