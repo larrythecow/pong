@@ -35,7 +35,6 @@ void pong::onEvent(SDL_Event* event) {
             break;
         case SDL_QUIT:
             running=false;
-			exit(-1);
 			break;
 		default:
             break;
