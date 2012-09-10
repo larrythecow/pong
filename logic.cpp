@@ -78,6 +78,4 @@ void pong::logic() {
         if (rPad->getY() >= 550)
             rPad->setY(550);
     }
-
-    SDL_Delay(5);
 }

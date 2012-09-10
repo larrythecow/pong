@@ -16,14 +16,16 @@ pong::~pong(){
 
 int pong::execute() {
     init(800, 600, 16);
-
+	
     while (running) {
-        while (SDL_PollEvent(&event))
+   	  Uint32 start = SDL_GetTicks();
+		  while (SDL_PollEvent(&event))
             onEvent(&event);
         logic();
         render();
 
-
+		  if(SDL_GetTicks()-start < 1000/FPS)
+			  SDL_Delay(1000/FPS-(SDL_GetTicks()-start));
     }
 
     cleanup();

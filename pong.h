@@ -5,6 +5,8 @@
 #include "Ball.h"
 #include "Pad.h"
 
+#define FPS 30
+
 class pong {
 private:
     bool running;
